@@ -1,8 +1,8 @@
-exe: control.c
-	gcc control.c -o exe
+control: control.c write
+	gcc control.c -o control
 
-run: exe
-	./exe
+write: writing.c 
+	gcc writing.c -o write
 
 clean:
 	rm *~ *.out
